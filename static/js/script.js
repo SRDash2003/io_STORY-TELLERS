@@ -32,18 +32,20 @@ document.getElementById('submit-decision').addEventListener('click', async funct
     const genre = document.getElementById('genre-select').value;
 
     try {
+        // Send the user's decision and the current story context to the AI
         const nextScene = await generateNextScene(userDecision, currentStory, genre);
-        
         if (nextScene) {
+            // Append the next scene to the story
             document.getElementById('story-text').innerText += "\n\n" + nextScene;
-            document.getElementById('user-input').value = ''; // Clear input field
+            document.getElementById('user-input').value = '';  // Clear input field
         } else {
             console.error('No next scene generated.');
         }
     } catch (error) {
-        console.error('Error generating the next scene:', error);
+        console.error('Error generating next scene:', error);
     }
 });
+
 
 async function generateInitialStory(genre, characterName) {
     try {
