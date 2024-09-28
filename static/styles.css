@@ -1,0 +1,78 @@
+/* Basic styling for the interface */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+}
+
+header {
+    text-align: center;
+}
+
+#story-section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+#choices-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.choice-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1; /* Ensures buttons take equal space */
+    margin: 0 5px; /* Adds spacing between buttons */
+}
+
+.choice-button:hover {
+    background-color: #0056b3;
+}
+
+#input-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px; /* Adds margin above the input section */
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+
+    <title>StoryWeaver</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Generative AI Storytelling</h1>
+            <p>Co-create interactive stories where the narrative evolves based on your choices.</p>
+        </header>
+
+        <div id="story-section">
+            <p id="story-text">Welcome to your adventure! Make your choices to shape the story.</p>
+        </div>
+
+        <div id="choices-section">
+            <button class="choice-button" onclick="makeChoice(1)">Start a Journey</button>
+            <button class="choice-button" onclick="makeChoice(2)">Explore the Forest</button>
+        </div>
+
+        <div id="input-section" style="display: none;">
+            <input type="text" id="user-input" placeholder="Enter your next action...">
+            <button onclick="submitInput()">Submit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
