@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dreamify : Craft your dream story.</title>
 
-    <title>StoryWeaver</title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Generative AI Storytelling</h1>
-            <p>Co-create interactive stories where the narrative evolves based on your choices.</p>
-        </header>
 
-        <div id="story-section">
-            <p id="story-text">Welcome to your adventure! Make your choices to shape the story.</p>
-        </div>
-
-        <div id="choices-section">
-            <button class="choice-button" onclick="makeChoice(1)">Start a Journey</button>
-            <button class="choice-button" onclick="makeChoice(2)">Explore the Forest</button>
-        </div>
-
-        <div id="input-section" style="display: none;">
-            <input type="text" id="user-input" placeholder="Enter your next action...">
-            <button onclick="submitInput()">Submit</button>
-        </div>
+  <div class="container">
+    <h1>Welcome to Dreamify</h1>
+    <center><h4><i>Craft your dream story.</i></h4></center>
+  <br>
+  <p>
+    yjgvilasgyiaguflvgailugfiawlfuvagwiefhuliebgfwieugvaliaugvilgfvilagaigilgfvksdvif
+  </p>
+  <p>
+    jhkgcfyiyfih
+  </p>
+    <!-- Character Name Input -->
+    <div id="step1">
+      <label for="character-name"><h3>Enter your character name:</h3></label>
+      <input type="text" id="character-name" class="form-control" placeholder="e.g. Alex">
+      <button id="next-step1" class="btn">Next</button>
     </div>
+  
+    <!-- Genre Selection -->
+    <div id="step2" style="display:none;">
+      <h3>Hi <span id="display-name"></span>, choose your genre:</h3>
+      <select id="genre-select" class="form-control">
+        <option value="action">Action</option>
+        <option value="romance">Romance</option>
+        <option value="sci-fi">Sci-Fi</option>
+        <option value="forest adventure">Forest Adventure</option>
+        <option value="horror">Horror</option>
+      </select>
+      <button id="next-step2" class="btn">Start Story</button>
+    </div>
+  
+    <!-- AI-Generated Story and User Input -->
+    <div id="story-container" style="display:none;">
+      <div id="story-text"></div>
+      <label for="user-input">Your decision:</label>
+      <input type="text" id="user-input" class="form-control" placeholder="Type your next action here">
+      <button id="submit-decision" class="btn">Submit</button>
+    </div>
+  </div>
 
-    <script src="script.js"></script>
+  <!-- Link to JS -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
